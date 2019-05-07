@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
 
+<div id="box"></div>
+
+   <script>
+
+       /**
+        *    如果在script标签中直接打印this，
+        *    this指向windows对象；
+        *    windows是script最顶层对象
+        *
+        */
+
+       // console.log(this);
+
+       // function fn() {
+       //     console.log(this)
+       // }
+       // fn()
+
+       var oBox = document.getElementById('box');
+       oBox.onclick = function () {
+           alert(this)
+       }
+
+   </script>
 </body>
 </html>
