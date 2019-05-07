@@ -7,6 +7,11 @@
 <body>
     <script>
         /**
+         *   1.先声明
+         *   2.后执行
+         *       var fn2
+         *   3.函数声明与函数表达式的区别
+         *       函数声明可以提前解析，函数表达式不可以提前解析，要先定义后执行
          *
          */
 
@@ -15,11 +20,17 @@
         function fn1() {
             alert('你好');
         }
+
+        /**
+         *   1.加（）的内容必定为函数
+         *
+         */
         var fn2 = function () {
             alert('大家好');
         }
+
         fn2()
-        
+        console.log(fn2)
     </script>
 </body>
 </html>
