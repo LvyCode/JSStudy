@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <script>
+
+        /**
+         *    a++  :   a = a + 1;
+         *    a--  :   a = a - 1;
+         *
+         */
+
+        var box = document.getElementById('box');
+        box.num = 0;
+
+        box.onclick = function () {
+            // console.log(box.num)
+            // console.log(box.num++)
+
+            box.num += 5;
+            console.log(box.num)
+        }
+
+    </script>
+
+</body>
+</html>
