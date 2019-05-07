@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    /**
+     *   innerHTML 与 innerText 都是获取标签的内容或操作文本的样式
+     *   innerHTML 与 innerText 区别
+     *       innerHTML ：会解析代码；
+     *       innerText ：不会解析标签代码；
+     *   注意：单引号与双引号，如果说不是进行字符串的拼接的话，要区别分开
+     *
+     */
+
+    var  oBox = document.getElementById('box');
+    oBox.onmouseenter = function () {
+        oBox.innerHTML = '\n' +
+            '<a href="https://www.baidu.com">百度</a>';
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #a{
+             width: 200px;
+             height: 100px;
+             margin: auto;
+            background-color: gray;
+         }
+        #b{
+            width: 200px;
+            height: 100px;
+            margin: 10px auto ;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<div id="a"></div>
+<div id="b"></div>
+<script>
+    var a = document.getElementById('a');
+    var b = document.getElementById('b');
+    a.onmouseenter = function () {
+        b.style.backgroundColor = 'red';
+
+    }
+    a.onmouseout = function () {
+        b.style.backgroundColor = 'gray';
+
+    }
+    b.onmouseenter = function () {
+        a.style.backgroundColor = 'red';
+
+    }
+    b.onmouseout = function () {
+        a.style.backgroundColor = 'gray';
+
+    }
+</script>
+</body>
+</html>
