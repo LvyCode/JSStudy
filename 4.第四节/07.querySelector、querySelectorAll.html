@@ -15,12 +15,20 @@
 
    <script>
 
+       /**
+        *    querySelector 与 querySelectorAll区别
+        *      querySelector    只能获取一个
+        *      querySelectorAll 获取到的一个集合
+        *          如果集合只有一个对象，还是必须要加上下标。
+        */
        // var wraps = document.getElementsByClassName('wrap');
        // console.log(wraps);
        // var wraps = document.querySelector('#box .wrap');
        var wraps = document.querySelectorAll('.wrap');
 
        console.log(wraps);
+
+       console.log(wraps[0].style.backgroundColor = 'red');
 
    </script>
 </body>

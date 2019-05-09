@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="box" class="wrap" title="大水滴" fangfu="了防护">
+
+   </div>
+
+   <script>
+       /**
+        *   1.自定义标签属性
+        *      人为设置的
+        *   2.操作自定义标签的属性：
+        *      修改：setAttribute('attr','value')
+        *      删除：removeAttribute
+        *      获取：getAttribute
+        *      判断是否存在：hasAttribute
+        *
+        */
+       var oBox = document.getElementById('box');
+       oBox.class = 'btn';
+       console.log(oBox.class);
+       oBox.id = 'panfu';
+
+       oBox.setAttribute('fangfu','didi')
+       oBox.setAttribute('xiaobao','hanyong');
+       oBox.removeAttribute('fangfu');
+       alert(oBox.getAttribute('title'));
+       alert(oBox.hasAttribute('beijing'));
+   </script>
+</body>
+</html>
