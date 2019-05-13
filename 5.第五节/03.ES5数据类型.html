@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="div"></div>
+   <script>
+       /**
+        *  ES5的数据类型：
+        *      number类型
+        *      string类型
+        *      boolean类型
+        *      undefined 未定义类型
+        *      null类型
+        *      object类型
+        *
+        *
+        *  用于检测数据类型：typeof(不是专业用来测试数据类型)
+        *
+        */
+       var num = 123;   //数字     number类型
+       console.log(typeof num)
+       var str = '123'; //字符串    string类型
+       var bool = false; //布尔类型  boolean类型
+
+       var und;
+       console.log(und);
+
+       var abc = document.getElementById('div');//null 空对象 空类
+       console.log(typeof abc)
+
+       var arr = [];
+       console.log(typeof arr)
+
+       var json = {};
+       console.log(typeof json);
+
+       var fn = function () {};
+       console.log(typeof fn)
+
+
+
+   </script>
+</body>
+</html>

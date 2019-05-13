@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+
+        /**
+         *   比较符
+         *     >、<、>=、<=、!=、==、===、!==
+         *   隐性类型转换
+         *      在进行数据类型的对比的时候，会悄悄的进行转换
+         *   正常在进行判断的时候，最好要运用===,会进行详细的数据类型比较
+         *
+         */
+        var a = 1;
+        var b = 2;
+        var c = '1';
+        // console.log(a>b)
+
+        console.log(a == c);//两个等号的时候，会忽略数据类型；
+
+        console.log(a === c);//三个等号的时候，直接对比数据类型，如果数据类型不相等返回false
+
+    </script>
+
+</body>
+</html>
