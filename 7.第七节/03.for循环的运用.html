@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+
+    <script>
+        /**
+         * 使用自定义属性来进行记录
+         *
+         * */
+        var btns = document.getElementsByTagName('button');
+        for (var i = 0; i<10; i++){
+            btns[i].cishi = i;
+            btns[i].onclick = function () {
+                console.log(this.cishi)
+            }
+            console.log(i);
+        }
+        console.log(i);
+        console.log('我开始了嘛')
+
+    </script>
+</body>
+</html>

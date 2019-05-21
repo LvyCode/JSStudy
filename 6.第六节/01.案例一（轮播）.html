@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #wrap{
+            position: relative;
+            width: 640px;
+            height: 360px;
+            border: 2px solid #00f;
+            user-select: none;
+        }
+        ul li img{
+            width: 640px;
+            height: 360px;
+        }
+        ul li{
+            display: none;
+            position: absolute;
+        }
+        ul .active{
+            display: block;
+        }
+        .btn{
+            position: absolute;
+            width: 25px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.3);
+            top: calc(50% - 25px);
+            text-align: center;
+            line-height: 50px;
+            font-size: 26px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .right{
+            right: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="wrap">
+        <ul>
+            <li class="active"><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+        </ul>
+        <div class="btn left"></div>
+        <div class="btn right"></div>
+    </div>
+    
+
+   <script>
+       /**
+        *    1.获取元素（图片内容，左右按钮）
+        *    2.右点击
+        *       如何让它切换第一张
+        *       如何让它来切换？
+        *    3.左点击
+        *       如何让它切换第一张
+        *       如何让它来切换？
+        *
+        *
+        *
+        *   1.操作左右按钮，（点击事件）
+        *   2.操作图片（那些图片显示与隐藏、图片下一张显示、上一张隐藏）
+        *   3.判断图片是否到达临界值（if判断）
+        *
+        */
+
+       var leftBtn = document.getElementsByClassName('left')[0];
+           rightBtn = document.getElementsByClassName('right')[0];
+           list = document.getElementsByTagName('li');
+           index = 0;
+
+           
+       rightBtn.onclick = function () {
+           //如何让上一点图片小时，下一张图片显示
+           list[index].className = '';
+           index++;
+           if (index>3){
+               index = 0;
+           }
+           list[index].className = 'active';
+       }
+       leftBtn.onclick = function () {
+           //如何让上一点图片小时，下一张图片显示
+           list[index].className = '';
+           index--;
+           if (index<0){
+               index = 3;
+           }
+           list[index].className = 'active';
+       }
+
+   </script>
+</body>
+</html>

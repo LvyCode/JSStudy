@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .checkBtn{
+            position: absolute;
+            top: -30px;
+            height: 30px;
+        }
+        .checkBtn span{
+            float: left;
+            width: 75px;
+            height: 30px;
+            background-color: #aaa;
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px;
+
+        }
+        .checkBtn .on{
+            background-color: #f09;
+        }
+
+        #wrap{
+            position: relative;
+            top: 32px;
+            width: 640px;
+            height: 360px;
+            border: 2px solid #00f;
+            user-select: none;
+        }
+        ul li img{
+            width: 640px;
+            height: 360px;
+        }
+        ul li{
+            display: none;
+            position: absolute;
+        }
+        ul .active{
+            display: block;
+        }
+        .btn{
+            position: absolute;
+            width: 25px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.3);
+            top: calc(50% - 25px);
+            text-align: center;
+            line-height: 50px;
+            font-size: 26px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .right{
+            right: 0;
+
+        }
+        .description{
+            position: absolute;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+    <div class="checkBtn">
+        <span class="on">循环切换</span>
+        <span>单边切换</span>
+    </div>
+    <ul>
+        <li class="active"><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/2.jpg" alt=""></li>
+        <li><img src="img/3.jpg" alt=""></li>
+        <li><img src="img/4.jpg" alt=""></li>
+    </ul>
+    <div class="btn left"> < </div>
+    <div class="btn right"> > </div>
+    <p class="description top"><span class="text">1</span>/5</p>
+    <p class="description bottom"> 一 </p>
+</div>
+
+
+<script>
+    /**
+     *    1.切换问题
+     *    2.操作左右按钮（点击事件）
+     *    3.操作图片（那些图片显示与隐藏、图片下一张显示、上一张隐藏——
+     *    4.判断图片是否到达临界值（if判断）
+     *    5.改变文本的值
+     *
+     */
+    var Btns = document.querySelectorAll('.checkBtn span');
+        leftBtn = document.getElementsByClassName('left')[0];
+        rightBtn = document.getElementsByClassName('right')[0];
+        list = document.getElementsByTagName('li');
+        index = 0;
+        Txt = document.querySelector('description span');
+        arrText = ['A','B','C','D','E'];
+        mark = true;
+        bot = document.getElementsByClassName('bottom');
+
+    
+    Btns[1].onclick = function () {
+        this.className = 'on';
+        Btns[0].className = '';
+        mark = false;
+        
+    }
+    Btns[0].onclick = function () {
+        this.className = 'on';
+        Btns[1].className = '';
+        mark = true;
+
+    }
+    rightBtn.onclick = function () {
+        //如何让上一点图片小时，下一张图片显示
+        list[index].className = '';
+        index++;
+        if (mark){//如果为真
+            if (index>3){
+                index = 0;
+            }
+        } else {//为假
+            if (index>3){
+                index = 3;
+            }
+        }
+
+        list[index].className = 'active';
+        Txt.innerHTML = index;
+        bot.innerHTML = arrText[index];
+
+    }
+    leftBtn.onclick = function () {
+        //如何让上一点图片小时，下一张图片显示
+        list[index].className = '';
+        index--;
+        if (mark){
+            if (index<0){
+                index = 3;
+            }
+        } else{
+            if (index<0){
+                index = 0;
+            }
+        }
+
+        list[index].className = 'active';
+
+        Txt.innerHTML = index;
+
+
+        bot.innerHTML = arrText[index];
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
