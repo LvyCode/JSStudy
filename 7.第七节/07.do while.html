@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <button>小按钮</button>
+    <script>
+        var btns = document.getElementsByTagName('button');
+
+        var i = 0;//定义
+        do{//内容
+            btns[i].i = i;
+            btns[i].onclick = function () {
+                alert(this.i);
+            }
+            i++;//步长
+        }while (i<10)//判断条件
+
+    </script>
+</body>
+</html>
