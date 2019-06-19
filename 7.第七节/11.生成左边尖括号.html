@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 150px;
+            height: 250px;
+            border: 1px solid deeppink;
+        }
+        #box > div{
+
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ff9988;
+        }
+        /*#box > div:nth-child( 1 ){*/
+        /*    top: 1px;*/
+        /*    left: 1px;*/
+        /*}*/
+        /*#box > div:nth-child( 2 ){*/
+        /*    top: 51px;*/
+        /*    left: 51px;*/
+        /*}*/
+        /*#box > div:nth-child( 3 ){*/
+        /*    top: 101px;*/
+        /*    left:101px;*/
+        /*}*/
+        /*#box > div:nth-child( 4 ){*/
+        /*    top: 151px;*/
+        /*    left: 51px;*/
+        /*}*/
+        /*#box > div:nth-child( 5 ){*/
+        /*    top: 201px;*/
+        /*    left: 1px;*/
+        /*}*/
+
+
+    </style>
+</head>
+<body>
+
+   <div id="box">
+<!--       <div>0</div>-->
+<!--       <div>1</div>-->
+<!--       <div>2</div>-->
+<!--       <div>3</div>-->
+<!--       <div>4</div>-->
+   </div>
+   <script>
+       var box = document.getElementById('box'),
+           num = 5,
+           str = '',
+           mid = (num-1)/2;
+       for (var i = 0;i<num; i++){
+           var toph = 50*i;
+           var lefth = 50*(num-i-1);
+           console.log('aaaaaaaa'+toph);
+           if (i<mid){
+               str += '<div style="top:'+toph+'px;left:'+toph+'px; float: left;"></div>'
+
+           } else{
+               str += '<div style="top:'+toph+'px;left:'+lefth+'px; float: left;"></div>'
+
+           }
+
+       }
+       console.log('str;'+str);
+       box.innerHTML += str;
+
+   </script>
+
+</body>
+</html>

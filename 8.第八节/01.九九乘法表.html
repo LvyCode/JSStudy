@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 70px;
+            height: 35px;
+            background-color: #f9f;
+            margin: 5px;
+
+            vertical-align: top;
+            line-height: 35px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box">
+    </div>
+    <script>
+        var  box = document.getElementById('box'),
+             str = '';
+        for (var i = 1;i<10;i++){
+            for (var j = 1;j<i+1;j++){
+               str += '<span>'+i+'*'+j+'='+i*j+'</span>'
+            }
+            str += '<br/>';
+
+        }
+        str +='<hr/>';
+        for (var i = 9;i>0;i--){
+            for (var j = 1;j<i+1;j++){
+                str += '<span>'+i+'*'+j+'='+i*j+'</span>'
+            }
+            str += '<br/>';
+        }
+
+
+        box.innerHTML = str;
+
+
+    </script>
+</body>
+</html>

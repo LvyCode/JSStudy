@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*
+            Number() 把样式类型转换为数字类型；
+        * */
+        // var str = '123';
+        // console.log(typeof str);
+        // var num = Number(str);
+        // console.log(typeof num)
+        // console.log(num)
+
+        /*
+         如果为数组的时候，数组里没有内容的话，会返回0
+         如果数组里面有内容的话，内容为字符串的时候，返回对应的数字
+         NaN是一个坏值
+        * */
+
+
+        // var obj = ['12'];
+        // var num = Number(obj);
+        // console.log(num)
+
+
+        /*
+        false 转为数字类型的时候返回0
+        true  转为数字类型的时候返回1
+       * */
+
+        // var obj = '-123';
+        // var num = Number(obj);
+        // console.log(num)
+        //
+        // var bool= true;
+        // var num = Number(bool)
+        // console.log(num)
+
+
+        // var nul = null;
+        //
+        // var num = Number(nul)
+        // console.log(num)
+
+        //json对象转为数字类型的时候，返回NaN
+        //如果你进行了非法的运算，就会返回NaN
+        // var json = {};
+        // var num = Number(json)
+        // console.log(num)
+
+        var num = 1/'a';
+        console.log(num)
+    </script>
+</body>
+</html>
