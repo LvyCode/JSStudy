@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*
+           parseInt: 取整数，把小数点部分四舍五入
+        * */
+        // var a = 5.20;
+        // var  b = parseInt(a)
+        // console.log(b)
+
+
+        /*
+         经过parseInt的处理，字符串的内容会隐式转为数字类型
+        * */
+        // var  b = parseInt('9.20')
+        // console.log(b)
+        // console.log(typeof b)
+
+        // var  b = parseInt('-100px')
+        // console.log(b)
+        // console.log(typeof b)
+
+        // var  b = parseInt('-100px')
+        // console.log(b)
+        // console.log(typeof b)
+
+        // var  b = parseInt('123abc')
+        // console.log(b)
+        // console.log(typeof b)
+
+        /*
+          如果为bool值的话直接返回NaN
+        * */
+        var  b = parseInt(true)
+        console.log(b)
+        console.log(typeof b)
+
+    </script>
+</body>
+</html>
