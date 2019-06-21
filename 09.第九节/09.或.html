@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+          ||   或两边会转变为布尔值，左边的内容如果说是假值
+          （六个转为false的值： 0 NaN false null  '' undefined）
+          就通过，如果说是遇到真值的时候，就停止，返回出值对应的真值
+        */
+        var abc = null || 123 || 'candy'
+        console.log(abc)
+
+
+        var a = null && 123 || 'candy' && false
+        console.log(a)
+
+    </script>
+</body>
+</html>
