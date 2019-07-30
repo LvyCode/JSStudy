@@ -47,7 +47,7 @@
     <div id="wrap">
         <div>
             <p>问题</p>
-            <ul>
+            <ul class="list">
                 <li>问题不大</li>
                 <li>僵小鱼</li>
                 <li>秒我</li>
@@ -57,7 +57,7 @@
         </div>
         <div>
             <p>地区</p>
-            <ul>
+            <ul class="list">
                 <li>北京</li>
                 <li>天津</li>
                 <li>上海</li>
@@ -67,7 +67,7 @@
         </div>
         <div>
             <p>爱好</p>
-            <ul>
+            <ul class="list">
                 <li>女装</li>
                 <li>唱歌</li>
                 <li>跳舞</li>
@@ -78,6 +78,42 @@
     </div>
 
     <script>
+        //1.for循环遍历每一个p标签，进行绑定点击事件
+
+        var titles = document.getElementsByTagName('p'),
+            ollist = document.getElementsByClassName('list'),
+            len = titles.length;
+
+        for (var i = 0;i<len;i++){
+
+            titles[i].candy = i;
+            titles[i].flag = false;
+            titles[i].onclick = function () {
+
+
+                // console.log(titles[i].candy)
+                if (this.flag){
+                    this.flag = false
+                    ollist[this.candy].style.display = 'none';
+                } else
+                {
+                    for (var j = 0;j<len;j++){
+
+                        ollist[j].style.display = 'none';
+                        titles[j].flag = false
+                    }
+
+                    this.flag = true
+
+                    ollist[this.candy].style.display = 'block';
+                }
+
+            }
+        }
+        
+        //2.做个开关 （boolean），
+
+
 
     </script>
 </body>
